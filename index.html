@@ -1,0 +1,55 @@
+<!--Note: I attempted to use MockAPI.  I got as far as getting my examples to display, but I kept getting errors when I
+tried to add new items.  This simplified version is my last-minute "meet the minimum requirements of the assignment" fallback.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Reading List</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class = "container">
+
+    <div class="title">
+        <h1 style="color: #212192;">Reading List:</h1>
+        <h4 style="color: brown;"><strong>Books to Read:</strong></h4><br />
+    </div>
+
+<div class="card">
+    <div class="card body">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <div class="form">
+                    <form action="javascript:void(0);" method="POST" onsubmit="app.AddBook()">  <!--button for adding a book to the empty array in the JS file-->
+                        <input type="text" id="add-title" placeholder="Book Title">
+                        <input type="submit" value="Add Book" class="btn btn-primary">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <br />
+    <center><h4 style="color:rgb(0, 129, 0)" id="counter"></h4></center>
+    <br />
+
+    <table style = "width: 100%" class="table table-bordered border-dark table-striped table-hover"> <!--table is bordered, striped, and hover effect when cursor is over a row-->
+    <tr>
+        <h3><th>Title:</th><th>Edit:</th><th>Delete:</th></h3>          <!--sets the title in one column and the "Edit" and "Delete" buttons in other columns-->
+    </tr>                                                              
+        <tbody id="books"></tbody>
+    </table>
+</div>
+
+<div id="edit-box" role="aria-hidden">                                  <!--edit box for updating a book title-->
+    <form action="javascript:void(0);" method="POST" id="save-edit">
+      <input type="text" id="edit-title">
+      <input type="submit" value="Save" class="btn btn-warning"/> <a onclick="CloseInput()" aria-label="Close">&#10006;</a> <!--The #10006 value closes the edit box when "X" is clicked. -->
+    </form>
+  </div>
+
+<script src="ReadingList.js"></script>
+</body>
+</html>
