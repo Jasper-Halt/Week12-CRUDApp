@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(240,240,240) !important;      /*the "important!" allows CSS to override bootstrap*/
+}
+
+.title {
+    text-align: center;
+    margin-top: 25px;
+  }
+
+.card {
+    background-color: rgb(240,240,240) !important;     /*sets background for the bootstrap card to match page background.*/
+    border: none !important;                             /*eliminates the border around the bootstrap card, so only the input box is visible*/
+}
+.form {
+      margin: auto;
+      max-width:600px;
+      text-align: center
+  }
+
+input[type="submit"], button, [aria-label] {
+    cursor: pointer;                                    /*pointer for when hovering over buttons. */
+  }
+
+.counter {
+    text-align: center                                  /*centers the counter text*/
+  }
+
+#edit-box {
+    display: none;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+td {
+      background-color: rgb(94, 97, 100);
+      padding-right: 10px;
+      text-align: left;
+  }
+
+.add-title {
+      background: transparent !important;
+  }
+ 
